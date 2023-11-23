@@ -4,43 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ID Travel Agent</title>
-    <link rel="stylesheet" href="css/style.css"
+    <link rel="stylesheet" href="CSS/style.css"
 </head>
+
 <body>
     <header>
-        <section class="navigation-header">
-            <a href="">Logo</a>
-            <nav class="navigation">
+        <div class="header">
+            <a href="#default" class="logo">Travel Agent</a>
+            <div class="header-right">
                 <a href="">Home</a>
                 <a href="">Our Package</a>
                 <a href="">Call Us</a>
-            </nav>
-        </section>
+            </div>
+        </div>
 
-        <section class="title-header">
-            <h1> Your Trusted Travel Agents </h1>
-            <h4> Your happiness is our happiness</h4>
-        </section>
+        <div style="text-align:center;">
+            <h1>Your Trusted Travel Agents</h1>
+            <br>
+            <p>Your happiness is our happiness</p>
+        </br>
+          </div>
     </header>
 
     <main id="main-section">
         <section class="review-section">
-            <img src="assets/Travel Agent.jpg"
-            <h5> Liburan jadi menyenangkan bersama Travel Agentku. </h5>
+            <img src="assets/Travel 1.png" style="width:500px;height:400px;">
+            <img src="assets/Travel 2.png" style="width:500px;height:400px;">
+            <img src="assets/Travel 3.png" style="width:500px;height:400px;">
+            <img src="assets/Travel 4.png" style="width:500px;height:400px;">
+            <h5><i> Liburan jadi menyenangkan bersama Travel Agentku. </i></h5>
         </section>
 
         <section class="message-us">
             <h5> Contact Us </h5>
             <h6> Sales akan menghubungi anda 1x24 jam setelah data kami terima. </h6>
-            <form class="input-message-us">
-                <label for="name-input">Your Name</label>
-                <input id="name-input" type="text" placeholder="First and Last Name">
-                <label for="name-input">Email Address</label>
-                <input id="name-input" type="text" placeholder="example@gmail.com">
-                <button type="button" class="primary-button">Submit</button>
+            
+            <form action="login.php" method="POST" name="myForm" onsubmit="return validateForm()"> 
+                <fieldset>
+                <legend>Contact Us</legend>
+                <p>
+                    <label>Your Name:</label>
+                    <input type="text" name="Your Name" placeholder="First and last Name" />
+                </p>
+                <p>
+                    <label>Email Address:</label>
+                    <input type="text" name="Email" placeholder="example@email.com" />
+                </p>
+                <p>
+                    <label>What are you interested in?</label>
+                <select name="Select option">
+                    <option value="Bali">Bali</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Norway">Norway</option>
+                    <option value="New Zealand">New Zealand</option>
+                    <option value="United States">United States</option>
+                    </select>
+                </p>
+                <p>
+                    <label><input type="checkbox" name="remember" value="remember" /> Remember me</label>
+                </p>
+                <p>
+                    <input type="submit" name="submit" value="SEND" />
+                </p>
+               
+                </fieldset>
             </form>
         </section>
-
     </main>
 </body>
+
+<div class="card">
+    <img src="assets/blank profile.png" alt="Avatar" style="width:10%">
+    <div class="container">
+      <h4><b> Florance Hughes </b></h4> 
+      <p><i> Ibu Rumah Tangga, 28 </i></p> 
+</div>
+</div>
+
+<footer>
+    <p> Travel Agent </p>
+    <p><a href="Terms of Service">Terms of Service</a></p>
+    <span><a href="Privacy Policy">Privacy Policy</a></span>
+    <p><a href="2019">2019</a></p>
+</footer>
+
+<script>
+    function validateForm() {
+      let x = document.forms["myForm"]["fname"].value;
+      if (x == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+    }
+    </script>
+    
 </html>
